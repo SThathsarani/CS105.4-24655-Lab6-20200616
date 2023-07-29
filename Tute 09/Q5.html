@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function DayOfWeek(Inputnum) {
+  var Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  if (Inputnum >= 1 && Inputnum <= 7) {
+    return Days[Inputnum - 1];
+  } else {
+    return "Invalid input. Please enter a number between 1 and 7.";
+  }
+}
+
+// Prompt box to get the user input
+var userinput = prompt("Enter a number within the range 1-7:");
+
+// Parse the user input as a number
+var Inputnum = parseInt(userinput);
+
+// Check if the input is valid (not NaN)
+if (!isNaN(Inputnum)) 
+{
+  var DayofWeek = DayOfWeek(Inputnum);
+  alert("The day of the week is: " + DayofWeek);
+} else {
+  alert("Invalid input. Please enter a valid number.");
+}
+</script>
+
+</body>
+</html>
