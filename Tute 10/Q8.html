@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function BirthYear(NIC) {
+          
+          if (NIC.length >= 2) {
+            //assuming the students are born before 2000.
+            var Year = "19" + NIC.substring(0, 2); 
+            return Year;
+          } else {
+            return "Invalid NIC format. Please enter a valid NIC number.";
+          }
+        }
+        
+        
+        var NIC = prompt("Enter the student's NIC number (format: YYMMDDXXXXC):");
+        
+        
+        if (NIC) {
+          var yearOfBirth = BirthYear(NIC);
+          alert("The year of birth is: " + yearOfBirth);
+        } else {
+          alert("Invalid input. Please enter a valid NIC number.");
+        }
+        </script>
+</body>
+</html>
